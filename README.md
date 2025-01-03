@@ -1,53 +1,27 @@
 # Project streaming-poc
 
-One Paragraph of project description goes here
+This is a proof of concept project of a streaming websocket using a priority queue and "async processor" of video data.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+As of now, there's nothing, but soon will be.
 
-## MakeFile
 
-Run build make command with tests
-```bash
-make all
-```
+## Roadmap
 
-Build the application
-```bash
-make build
-```
+### Back
 
-Run the application
-```bash
-make run
-```
-Create DB container
-```bash
-make docker-run
-```
+[ ] Stream-load video in memory
+[ ] Process in chuncks based in size
+[ ] Send chuncks to the pqueue
+[ ] Use the pqueue to correctly order it
+[ ] Send to the websocket as needed, with overlap
 
-Shutdown DB Container
-```bash
-make docker-down
-```
+### Front
 
-DB Integrations Test:
-```bash
-make itest
-```
+[ ] Load video correctly
+[ ] Order video as it should be 
+[ ] Decompress
+[ ] Play
+[ ] Cache it for a while (duration times 2?)
 
-Live reload the application:
-```bash
-make watch
-```
-
-Run the test suite:
-```bash
-make test
-```
-
-Clean up binary from the last build:
-```bash
-make clean
-```
